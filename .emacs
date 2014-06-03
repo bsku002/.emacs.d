@@ -15,7 +15,7 @@
  '(current-language-environment "Latin-1")
  '(cursor-color "#cccccc")
  '(custom-enabled-themes (quote (ben-pink)))
- '(custom-safe-themes (quote ("033ebb7a2a3ac4a80590adbeea04f53bdc1584e47999bee8824990b9540794ce"  "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" default)))
+ '(custom-safe-themes (quote ("c317a7ff76d870ca327857f1e771f9b92001a585364ec9c5bb378ab885c25123" "033ebb7a2a3ac4a80590adbeea04f53bdc1584e47999bee8824990b9540794ce" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" default)))
  '(custom-theme-directory "~/.emacs.d/themes")
  '(default-input-method "latin-1-prefix")
  '(fci-rule-character-color "#452E2E")
