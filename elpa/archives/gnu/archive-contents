@@ -48,7 +48,11 @@
 	     ((:url . "http://elpa.gnu.org/packages/caps-lock.html")
 	      (:keywords))])
  (chess .
+<<<<<<< HEAD
 	[(2 0 4)
+=======
+	[(2 0 1)
+>>>>>>> 20344f395f0f3a506f5a689fb215b7b955fe342f
 	 ((cl-lib
 	   (0 5)))
 	 "Play chess in GNU Emacs" tar
