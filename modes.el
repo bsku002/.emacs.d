@@ -3,6 +3,10 @@
 	  (lambda () (abbrev-mode 1))) ;abbrev for text modes
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 
+;; c
+(require 'ecb)
+(require 'ecb-autoloads)
+
 ;; god mode
 (add-hook 'god-mode-enabled-hook 'my-update-cursor)
 (add-hook 'god-mode-disabled-hook 'my-update-cursor)
