@@ -4,8 +4,8 @@
 
 
 ;;;### (autoloads (ghci-completion-mode turn-on-ghci-completion)
-;;;;;;  "ghci-completion" "ghci-completion.el" (21342 62918 383694
-;;;;;;  190000))
+;;;;;;  "ghci-completion" "ghci-completion.el" (21487 22273 966927
+;;;;;;  437000))
 ;;; Generated autoloads from ghci-completion.el
 
 (autoload 'turn-on-ghci-completion "ghci-completion" "\
@@ -21,8 +21,8 @@ Provides basic TAB-completion of GHCi commands.
 
 ;;;***
 
-;;;### (autoloads nil nil ("ghci-completion-pkg.el") (21342 62918
-;;;;;;  490793 581000))
+;;;### (autoloads nil nil ("ghci-completion-pkg.el") (21487 22274
+;;;;;;  70313 262000))
 
 ;;;***
 

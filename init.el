@@ -8,10 +8,10 @@
 
 
 ;; requirements
-(load-file "~/.emacs.d/variables.el")
-(load-file "~/.emacs.d/org-projects.el")
 (load-file "~/.emacs.d/functions.el")
+(load-file "~/.emacs.d/variables.el")
 (load-file "~/.emacs.d/modes.el")
+(load-file "~/.emacs.d/org-projects.el")
 
 
 ;; enable modes
@@ -22,18 +22,11 @@
 (desktop-save-mode 1)
 (ido-mode t)
 (scroll-bar-mode -1)
-(elpy-enable)
+;(elpy-enable)
 ;(electric-pair-mode 1)
 ;(workgroups-mode 1)
 ;(auto-complete-mode t)
-
-
-;; hooks
-(add-hook 'text-mode-hook 
-	  (lambda () (abbrev-mode 1))) ;abbrev for text modes
-(add-hook 'god-mode-enabled-hook 'my-update-cursor)
-(add-hook 'god-mode-disabled-hook 'my-update-cursor) ;?
-(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+(yas-global-mode 1)
 
 
 ;; key bindings

@@ -1,3 +1,59 @@
+(defun org-file-from-subtree (&optional name)
+  "Cut the subtree currently being edited and create a new file
+from it.
+
+If called with the universal argument, prompt for new filename,
+otherwise use the subtree title."
+  (interactive "P")
+  (org-back-to-heading)
+  (let ((filename (cond
+                   (current-prefix-arg
+                    (expand-file-name
+                     (read-file-name "New file name: ")))
+                   (t
+                    (concat
+                     (expand-file-name
+                      (org-element-property :title
+                                            (org-element-at-point))
+                      default-directory)
+                     ".org")))))
+    (org-cut-subtree)
+    (find-file-noselect filename)
+    (with-temp-file filename
+      (org-mode)
+      (yank))))
+
+; TODO look at this
+(defun org-split-file (file level outfmt)
+  "Split FILE into multiple files.
+ FILE is Org file to split.
+ LEVEL is outline level of headlines.
+ OUTFMT is a template for output files."
+   (let ((visiting (find-buffer-visiting file))
+         (cnt 1)
+         cand hl out)
+     (with-current-buffer (or visiting (find-file-noselect file))
+       (save-excursion
+         (save-restriction
+           (setq cand (org-map-entries 'point
+                                       (format "LEVEL=%s" level)
+                                       'file))
+           (while (setq hl (pop cand))
+             (goto-char hl)
+             (setq out (concat
+                        (org-replace-escapes outfmt
+                                             `(("%n" . ,(format "%s" cnt))))
+                        ".org"))
+             (org-copy-subtree)
+             (with-current-buffer (find-file-noselect out)
+               (erase-buffer)
+               (org-paste-subtree level)
+               (save-buffer))
+             (kill-buffer (find-buffer-visiting out))
+             (setq cnt (1+ cnt))
+             (print out)))))))
+
+
 (defun my-update-cursor ()
   (setq cursor-type (if (or god-local-mode buffer-read-only)
                         'bar

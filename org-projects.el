@@ -26,7 +26,7 @@
 	 :recursive t
 	 :htmlized-source nil
 	 :html-preamble t
-	 :exclude template
+	 ;:exclude template
 	 ;:html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"stylesheet.css\" />"
 	 )
 
